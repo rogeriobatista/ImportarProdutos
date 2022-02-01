@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Fd2bKZfQT9JSDzz99ExmeGGqGTgdmqQPNBJsfhzRlwMokJztjSw/CKAkkfntfS5gT+ISmt2uZPVMZYK0sefW7g==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\Valmir\\ImportarProdutos\\ImportarProdutos\\ImportarProdutos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rogerio\\.nuget\\packages\\csvhelper\\27.2.1\\csvhelper.27.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
