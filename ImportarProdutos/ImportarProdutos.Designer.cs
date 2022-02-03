@@ -133,6 +133,7 @@
             this.MaximizeBox = false;
             this.Name = "ImportarProdutos";
             this.Text = "Importar Produtos";
+            this.Load += new System.EventHandler(this.ImportarProdutos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
