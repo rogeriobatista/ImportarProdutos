@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "ImportarProdutos/1.0.0": {
         "dependencies": {
-          "CsvHelper": "27.2.1"
+          "CsvHelper": "27.2.1",
+          "IronXL.Excel": "2021.12.0"
         },
         "runtime": {
           "ImportarProdutos.dll": {}
@@ -19,6 +20,14 @@
           "lib/net6.0/CsvHelper.dll": {
             "assemblyVersion": "27.0.0.0",
             "fileVersion": "27.2.1.0"
+          }
+        }
+      },
+      "IronXL.Excel/2021.12.0": {
+        "runtime": {
+          "lib/netstandard2.0/IronXL.dll": {
+            "assemblyVersion": "2021.12.0.0",
+            "fileVersion": "2021.12.0.0"
           }
         }
       }
@@ -36,6 +45,13 @@
       "sha512": "sha512-uS5ix5hL9gL5taiAG//CScyJa8Fn1ZOh3FDhDvf4laboESFs84mCNropfp7PIt8xCkyQofljFpqu1B5UnSXjyA==",
       "path": "csvhelper/27.2.1",
       "hashPath": "csvhelper.27.2.1.nupkg.sha512"
+    },
+    "IronXL.Excel/2021.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F7ekFGBm5boGJ7YiwdmRW3J1vLDqsrvMnXNYEHIGnH/NjhnAbt9Ynnjs+17MVVrMCZN2FuxlS/7LOaPHMTSzoQ==",
+      "path": "ironxl.excel/2021.12.0",
+      "hashPath": "ironxl.excel.2021.12.0.nupkg.sha512"
     }
   }
 }

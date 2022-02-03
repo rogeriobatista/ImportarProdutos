@@ -17,3 +17,4 @@ D:\Projects\Valmir\ImportarProdutos\ImportarProdutos\obj\Debug\net6.0-windows\Im
 D:\Projects\Valmir\ImportarProdutos\ImportarProdutos\obj\Debug\net6.0-windows\ImportarProdutos.genruntimeconfig.cache
 D:\Projects\Valmir\ImportarProdutos\ImportarProdutos\bin\Debug\net6.0-windows\CsvHelper.dll
 D:\Projects\Valmir\ImportarProdutos\ImportarProdutos\obj\Debug\net6.0-windows\ImportarProdutos.csproj.CopyComplete
+D:\Projects\Valmir\ImportarProdutos\ImportarProdutos\bin\Debug\net6.0-windows\IronXL.dll
