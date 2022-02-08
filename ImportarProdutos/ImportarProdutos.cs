@@ -1,9 +1,4 @@
-using CsvHelper;
-using CsvHelper.Configuration;
-using System.Globalization;
-using System.Text;
 using IronXL;
-using System.Linq;
 
 namespace ImportarProdutos
 {
@@ -65,7 +60,6 @@ namespace ImportarProdutos
             WorkBook workbook = WorkBook.Create(ExcelFileFormat.XLSX);
             var sheet = workbook.CreateWorkSheet("lista_de_produtos");
 
-            var header = rows.FirstOrDefault().Columns;
             // Save Header
             sheet["A1"].Value = "Código do produto (ID Tray) - deixar sempre o número \"0\" (zero) para cadastro.";
             sheet["B1"].Value = "Referência (código fornecedor)";
@@ -90,7 +84,7 @@ namespace ImportarProdutos
             {
                 sheet["A" + rowIndex].Value = "0";
                 sheet["B" + rowIndex].Value = row.Columns[0].ToString();
-                sheet["C" + rowIndex].Value = row.Columns[1].ToString();
+                sheet["C" + rowIndex].Value = GetProductName(row.Columns[1].ToString(), row.Columns[8].ToString());
                 sheet["D" + rowIndex].Value = row.Columns[2].ToString();
                 sheet["E" + rowIndex].Value = row.Columns[8].ToString();
                 sheet["F" + rowIndex].Value = GetSEO(row.Columns[8].ToString());
@@ -108,6 +102,25 @@ namespace ImportarProdutos
             }
 
             workbook.SaveAs(filePath);
+        }
+
+        private string GetProductName(string productName, string description)
+        {
+            var indexBegin = description.IndexOf(":") + 2;
+            indexBegin = indexBegin < 0 ? 0 : indexBegin;
+
+            var indexEnd = description.IndexOf("<") - indexBegin;
+
+            if (indexEnd < 0 && description.Length >= 30)
+            {
+                indexEnd = 30;
+            }
+            else if (indexEnd < 0 && description.Length < 30)
+            {
+                indexEnd = description.Length - 1;
+            }
+
+            return $"{productName} {description.Substring(indexBegin, indexEnd)}";
         }
 
         private decimal GetHeight(string dimensions)
